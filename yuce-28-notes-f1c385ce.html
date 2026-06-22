@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日常查询与对照 · 加拿大28预测</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fce9d2 0%, #f8dcc2 30%, #f3cdb0 70%, #ecbfa0 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+      line-height: 1.7;
+      color: #2c251f;
+    }
+
+    .container {
+      max-width: 820px;
+      width: 100%;
+      background: white;
+      border-radius: 36px;
+      padding: 2.8rem 2.4rem;
+      box-shadow: 0 16px 42px -10px rgba(120, 70, 40, 0.22);
+      transition: box-shadow 0.2s ease;
+    }
+
+    @media (max-width: 540px) {
+      .container {
+        padding: 1.8rem 1.2rem;
+        border-radius: 24px;
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 640;
+      letter-spacing: -0.02em;
+      color: #3f2c1f;
+      margin-bottom: 0.6rem;
+      border-left: 6px solid #d6975c;
+      padding-left: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+        padding-left: 0.75rem;
+      }
+    }
+
+    .lead {
+      font-size: 1.12rem;
+      color: #5f4b39;
+      background: #fbf3eb;
+      padding: 1rem 1.4rem;
+      border-radius: 48px 48px 48px 12px;
+      margin: 1.2rem 0 2rem 0;
+      font-weight: 420;
+      display: inline-block;
+      width: auto;
+    }
+
+    p {
+      margin-bottom: 1.6rem;
+      font-size: 1rem;
+      color: #352b23;
+    }
+
+    a {
+      color: #b2692f;
+      text-decoration: none;
+      font-weight: 520;
+      background: linear-gradient(to right, #f5e1d1, #f0d5c1);
+      padding: 0.08rem 0.5rem;
+      border-radius: 28px;
+      transition: background 0.18s, box-shadow 0.18s;
+      display: inline-block;
+      line-height: 1.6;
+    }
+
+    a:hover,
+    a:focus-visible {
+      background: linear-gradient(to right, #eacbb5, #e3bea8);
+      box-shadow: 0 2px 10px rgba(150, 90, 50, 0.20);
+      outline: none;
+    }
+
+    .quote-note {
+      background: #fcf6ef;
+      border-left: 5px solid #d6975c;
+      padding: 1.2rem 1.6rem;
+      margin: 2rem 0 1.8rem 0;
+      border-radius: 24px 8px 24px 8px;
+      font-size: 0.98rem;
+      color: #3f322a;
+      font-style: normal;
+      position: relative;
+    }
+
+    .quote-note::before {
+      content: "💡 延伸阅读";
+      display: block;
+      font-weight: 580;
+      color: #8f5f39;
+      letter-spacing: 0.3px;
+      margin-bottom: 0.5rem;
+      font-style: normal;
+    }
+
+    .scene-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 1.8rem 0 2rem 0;
+    }
+
+    @media (max-width: 540px) {
+      .scene-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .scene-item {
+      background: #f9efe7;
+      padding: 1rem 1.2rem;
+      border-radius: 20px;
+      border: 1px solid #eddaca;
+      transition: background 0.15s;
+    }
+
+    .scene-item strong {
+      display: block;
+      font-size: 1.05rem;
+      color: #4d3629;
+      margin-bottom: 0.25rem;
+    }
+
+    .scene-item span {
+      font-size: 0.95rem;
+      color: #5f4b3b;
+    }
+
+    .faq-abbr {
+      margin: 2.4rem 0 1.4rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-row {
+      background: #f7ede4;
+      padding: 0.9rem 1.3rem;
+      border-radius: 60px 16px 16px 60px;
+      font-size: 0.98rem;
+      border-left: 4px solid #c98950;
+    }
+
+    .faq-row q {
+      font-weight: 500;
+      color: #3c2d23;
+    }
+
+    .faq-row span {
+      color: #574435;
+    }
+
+    .visit-line {
+      margin-top: 2.2rem;
+      padding-top: 1.4rem;
+      border-top: 2px dashed #e1c9b8;
+      font-size: 1.02rem;
+      text-align: center;
+      color: #3d3128;
+    }
+
+    .visit-line a {
+      font-size: 1.04rem;
+    }
+
+    .meta {
+      margin-top: 1.8rem;
+      font-size: 0.85rem;
+      color: #8b7563;
+      text-align: right;
+      letter-spacing: 0.2px;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #dfcabc, transparent);
+      margin: 1.2rem 0 0.2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>加拿大28预测 · 日常查询与对照</h1>
+    <div class="lead">多一个参考维度，少一些盲点 —— 简洁的预测信息流，适合习惯横向对比的阅读节奏。</div>
+
+    <p>
+      对于经常查阅走势与对照数据的用户来说，一个结构清晰、更新稳定的参考页面往往比即时聊天工具更有效力。<a href="https://yuce-28.com">加拿大28预测</a>所提供的内容，正是围绕这种“可反复回看、可交叉比对”的使用习惯来组织的。它并非要替代任何分析，而是在已有判断的基础上，再增加一层可溯源的视角。
+    </p>
+
+    <p>
+      站点内容覆盖短期形态、阶段统计以及同类参考值。没有密集的弹窗或冗余提示，信息由大段表格、简洁的走势条目、分类卡片构成，便于用户按自己的节奏摘取所需。每一组预测都标注了周期与参照范围，方便回溯验证。对于更倾向于静态浏览、不希望被打断思路的用户，这样的布局无疑降低了认知负荷。
+    </p>
+
+    <div class="quote-note">
+      曾有一位高频查询的用户提到：“我不需要它告诉我该怎么做，我只需要它把数据摆在那里，让我自己去对照。” 这或许也是对「查询式信息」最恰当的描述 —— 工具提供界面，判断留给自己。
+    </div>
+
+    <p>
+      从日常使用场景来看，多数人会在三个时间段打开这类页面：早间快速浏览当日参考值，午后对比历史分段，以及晚间做一次完整的回溯。为了配合这种习惯，页面在排版上刻意避免滑动冲突，将核心对照区放在首屏，次级参考通过分段标题自然引导。同时，每个模块都保留了清晰的日期/期号标识，方便用户做笔记或本地存档。
+    </p>
+
+    <div class="scene-grid">
+      <div class="scene-item">
+        <strong>📋 早间速览</strong>
+        <span>打开页面即展示当期的核心参考区间，节省逐行寻找的时间。</span>
+      </div>
+      <div class="scene-item">
+        <strong>📊 时段对比</strong>
+        <span>横向陈列最近数期的变化曲线与极值，适合做短期趋势对照。</span>
+      </div>
+      <div class="scene-item">
+        <strong>📁 延伸阅读区</strong>
+        <span>收录同类参考链接与常见统计口径说明，减少外部搜索成本。</span>
+      </div>
+      <div class="scene-item">
+        <strong>🔖 个人标记友好</strong>
+        <span>文字为主的布局便于直接截取、划线或复制到本地笔记中。</span>
+      </div>
+    </div>
+
+    <p>
+      页面底部保留了简洁的摘要式 FAQ，将用户最常提出的三个问题直接展开成短条目，省去点击折叠的步骤。这些条目并不试图穷尽所有疑惑，而是针对“数据来源覆盖范围”“更新频率”以及“如何配合其他参考使用”给出客观说明，保持工具页面的自洽性。
+    </p>
+
+    <div class="faq-abbr">
+      <div class="faq-row"><q>数据覆盖多长周期？</q> <span>默认展示近30期核心数据，并提供基于周/月的分段索引。</span></div>
+      <div class="faq-row"><q>页面多久更新一次？</q> <span>每个自然周期结束后自动刷新参考值，无延迟通知，保持静默更新。</span></div>
+      <div class="faq-row"><q>能否与其他来源交叉比对？</q> <span>完全可以，页面设计初衷即鼓励用户在多个信息源之间做独立判断。</span></div>
+    </div>
+
+    <p>
+      如果你习惯在看盘时保留一个静态参考页作为锚点，那么不妨将<a href="https://yuce-28.com">加拿大28预测</a>加入书签栏。它不打扰、不抢占注意力，只在你需要的时候提供一组可供对照的数字与趋势描述。正如导语所说——多一个参考维度，少一些盲点。工具是沉默的，但判断会因此更有底气。
+    </p>
+
+    <div class="visit-line">
+      ⚡ 日常对照 · <a href="https://yuce-28.com">加拿大28预测</a>
+    </div>
+
+    <hr />
+    <div class="meta">页面方向：简洁博客式 · 切入角度：日常查询/对照/延伸阅读</div>
+  </div>
+</body>
+</html>
